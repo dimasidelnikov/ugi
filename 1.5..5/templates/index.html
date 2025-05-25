@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/static/style.css">
+<h1>Інтернет-магазин</h1>
+<a href="/add">+ Додати товар</a> | <a href="/cart">Кошик</a> | <a href="/login">Вхід</a> | <a href="/register">Реєстрація</a>
+<ul>
+  {% for product in products %}
+    <li>
+      <a href="/product/{{ product[0] }}">{{ product[1] }}</a> – {{ product[3] }} грн
+      <a href="/add_to_cart/{{ product[0] }}">🛒</a>
+    </li>
+  {% endfor %}
+</ul>

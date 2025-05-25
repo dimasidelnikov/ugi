@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/static/style.css">
+<h2>Кошик</h2>
+{% if cart %}
+  <ul>
+    {% for item in cart %}
+      <li>{{ item[1] }} — {{ item[3] }} грн</li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>Кошик порожній.</p>
+{% endif %}
+<a href="/">← Продовжити покупки</a>

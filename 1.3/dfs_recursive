@@ -1,0 +1,23 @@
+def dfs_recursive(graph, node, visited=None):
+    if visited is None:
+        visited = set()
+    
+    visited.add(node)
+    print(node, end=" ")  # Вивід порядку обходу
+
+    for neighbor in graph[node]:
+        if neighbor not in visited:
+            dfs_recursive(graph, neighbor, visited)
+
+# Граф у вигляді списку суміжності
+graph = {
+    'A': ['B', 'C'],
+    'B': ['A', 'D', 'E'],
+    'C': ['A', 'F'],
+    'D': ['B'],
+    'E': ['B'],
+    'F': ['C']
+}
+
+print("DFS обхід:")
+dfs_recursive(graph, 'A')  # Починаємо з вершини 'A'
