@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💱 Потужний Конвертор Валют</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="converter-container">
+        <h1>Конвертор Валют</h1>
+        <p class="api-source">Курси від ПриватБанку (готівковий)</p>
+
+        <div class="converter-form">
+            <div class="form-group">
+                <label for="amount">Сума:</label>
+                <input type="number" id="amount" placeholder="Введіть суму" step="0.01">
+            </div>
+
+            <div class="form-group">
+                <label for="from-currency">З валюти:</label>
+                <select id="from-currency">
+                    <option value="">Завантаження...</option>
+                </select>
+            </div>
+
+            <div class="form-group swap-button-container">
+                <button id="swap-currencies" title="Поміняти валюти місцями">&#8646;</button>
+            </div>
+
+
+            <div class="form-group">
+                <label for="to-currency">У валюту:</label>
+                <select id="to-currency">
+                     <option value="">Завантаження...</option>
+                </select>
+            </div>
+
+            <button id="convert-button">Конвертувати</button>
+        </div>
+
+        <div id="result-area" class="result-area" aria-live="polite">
+            </div>
+         <div id="error-area" class="error-area" aria-live="assertive">
+             </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
